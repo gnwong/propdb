@@ -1,0 +1,79 @@
+/* For specific div id's */
+div#banner {
+  position:fixed;
+  text-align:center;
+  top:0px;
+  left:0px;
+  height:100px;
+  width:100%;
+  background-color:#630091;
+}
+
+
+div#generalCommands {
+  position:fixed;
+  text-align:center;
+  white-space:nowrap;
+  top:100px;
+  left:0px;
+  height:40px;
+  width:100%;
+  padding:10px;
+  /* background-color:#57068c; */
+  background-color:#0ff;
+}
+
+div#query {
+  position:fixed;
+  top:160px;
+  left:0px;
+  bottom:0px;
+  width:20%;
+  background-color:#f00;
+}
+
+div#list {
+  position:fixed;
+  top:160px;
+  right:0px;
+  bottom:0px;
+  width:20%;
+  background-color:#0f0;
+}
+
+
+div#imageSpace {
+  position:fixed;
+  top:160px;
+  left:20%;
+  bottom:60px;
+  width:60%;
+  background-color:#ff0;
+
+
+}
+
+
+div#statistics {
+  position:fixed;
+  bottom:0px;
+  left:20%;
+  right:20%;
+  height:60px;
+  background-color:#f0f;
+
+}
+
+
+/* General all-purpose use */
+div.tube {
+  margin:12px;
+}
+
+
+
+
+
+
+
+

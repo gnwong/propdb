@@ -1,0 +1,168 @@
+body {
+  background-image: url("bg-hd.gif");
+  background-repeat: repeat-x;
+  font-family: Arial,sans-serif;
+  font-size:small;
+  }
+  
+  @charset "UTF-8";
+  
+p {
+  margin: 10px;
+  }
+
+div#wrapper {
+  width: 960px;
+  margin: 0 auto;
+  margin-bottom:100px;
+  }
+
+div#col {
+  width: 200px;
+  float: left;
+  margin: 5px;
+  }
+  
+div#box {
+  border: solid 2px black;
+  width: 200px;
+  height: 200px;
+  float:left;
+  text-align: center;
+  margin:5px;
+}
+
+div#logger {
+  border: solid 2px black;
+  width: 2600px;
+  float:left;
+  text-align: left;
+  margin:5px;
+}
+
+div#inbox {
+  height: 70px;
+  width: 180px;
+  margin: auto;
+}
+
+
+
+article, aside, footer, section{ 
+  display: block; 
+  padding: 15px;
+  margin: 10px;
+  border: solid 0px black;
+  border-radius:5px;
+  }
+  
+section{
+  border: solid 1px black;
+}
+
+section.col{
+  height: 655px;
+  border: solid 1px black;
+}
+
+h5{
+  margin:1px;
+  margin-top:10px;
+}
+
+h6{
+  margin:0px;
+  padding:0px;
+  border:solid 0px black;
+}
+  
+  
+img{
+  margin: 20px;
+  margin-left:0px;
+  vertical-align:bottom;
+}
+ 
+select{
+  width: 135px;
+  height:18px;
+}
+
+textarea{
+  resize:none;
+  vertical-align:middle;
+  height:20px;
+  overflow: auto;
+}
+
+nav {
+  margin-left:20px;
+  color:white;
+}
+
+a.nav{
+  font: Arial;
+  font-size: small;
+  color:white;
+}
+
+a.nav:hover{
+  border:solid 1px white;
+  border-radius:20px;
+  padding:2px;
+}
+
+textarea.email{
+  overflow: auto;
+  resize:none;
+  vertical-align:top;
+  height:10px;
+  border: 2px solid black;
+}
+
+input[type="password"]{
+  resize:none;
+  vertical-align:top;
+  height:13px;
+  border: 2px solid black;
+  width: 110px;
+  overflow: auto;
+}
+
+input[type="submit"]{
+  margin-left:14px;
+  height: 40px;
+  background: white;
+  overflow: auto;
+}
+
+input[type="submit"].send{
+  height: 30px;
+  background: white;
+  margin-left: 0px;
+  overflow: auto;
+}
+
+h5{
+  margin-bottom:4px;
+}
+
+input[type="reset"]{
+  margin-left:14px;
+  height: 40px;
+  background: white;
+}
+
+
+header{
+  color:white;
+}
+
+p.fixed{
+  border:1px solid black;
+  padding:2px;
+  width: 135px;
+  height:18px;
+  margin:auto;
+}
+

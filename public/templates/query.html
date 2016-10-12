@@ -1,0 +1,106 @@
+$def with (QUERY_OPTIONS,IMG_FILENAMES,NAVBAR,CANV,STATBAR)
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Load style sheets and set meta data -->
+<head>
+<meta charset="utf-8" />
+<title>Query Propagation Database</title>
+<link rel="stylesheet" type="text/css" href="static/style.css" media="screen">
+<link rel="stylesheet" type="text/css" href="static/query.css" media="screen">
+<link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+</head>
+
+<!-- Body section -->
+<body onload="switchCanvas('map');">
+
+<!-- JS imports & definitions -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript">
+function Direct (address) {
+  if (address=="dl") {
+    alert("Preparing your files. This might take a few minutes. If server times out due to systems problems, the zip will still complete.");
+  }
+  document.getElementById("poss").innerHTML="Processing...";
+  document.getElementById("mainform").action=address;
+}
+
+function ReDirect (address) {
+  window.location = address;
+}
+
+function turnOffUpdate () {
+  document.getElementById("poss").disabled=true;
+}
+
+function switchCanvas(str){
+  canvas=document.getElementById("mainCanvas");
+$:CANV
+}
+
+function protect (id) {
+  element=document.getElementById(id);
+  if (String(element.value).indexOf(" ")+String(element.value).indexOf("'")!=-2) {
+    element.value="";
+  }
+}
+</script>
+
+<!-- Draw header -->
+<div id="banner">
+<a href="http://www.nyuwireless.org/"><img src="static/banner.png" height=60px></a>
+</div>
+
+
+<!-- Draw list of form commands to screen -->
+<form id="mainform" action="" method=POST>
+<div id="generalCommands">
+$:NAVBAR
+</div>
+
+<!-- Print query options -->
+<div id="query"><div class="tube">
+$:QUERY_OPTIONS
+</div></div>
+
+</form> <!-- End the form -->
+
+
+<!-- Write the list of available files to screen -->
+<div id="list"><div class="tube">
+<span class="listItem" style="font-size:120%;" onClick="switchCanvas('map');">Show Map</span><br>
+<h3>List of Valid Files:</h3>
+$:IMG_FILENAMES
+</div></div>
+
+<!-- Image container -->
+<div id="imageSpace">
+<img id="mainCanvas" src="dynamic_img?i=map" height=80% style="max-width:90%; box-shadow: 10px 10px 5px #888888;"><br>
+</div>
+
+<!-- Draw statistics about query to the screen -->
+<div id="statistics"></div>
+<script type="text/javascript">
+var svg = d3.select("#statistics").append("svg")
+    .attr("width","90%")
+    .attr("height",50);
+svg.append("rect")
+   .attr("x",0)
+   .attr("y",0)
+   .attr("width","100%")
+   .attr("height",50)
+   .attr("fill","black");
+$:STATBAR
+   .attr("x","2%")
+   .attr("y",30)
+   .attr("font-family","sans-serif")
+   .attr("font-size",16)
+   .attr("fill","white")
+   .attr("text-anchor","start");
+</script>
+
+</body>
+
+</html>
+
