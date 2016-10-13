@@ -1,8 +1,9 @@
 body {
   background-image: url("bg-hd.gif");
-  background-repeat: repeat-x;
+  background-repeat: repeat;
   font-family: Arial,sans-serif;
   font-size:small;
+  height:100%;
   }
   
   @charset "UTF-8";
@@ -164,5 +165,9 @@ p.fixed{
   width: 135px;
   height:18px;
   margin:auto;
+}
+
+.listItem:hover{
+  font-weight:bold;
 }
 

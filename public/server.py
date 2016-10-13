@@ -45,11 +45,17 @@ class query:
 
 class dl:
   def GET(self):
-    [a,b] = sql_interface.dl( web.input() )
-    return render.dl(a,b)
+    try:
+      [a,b] = sql_interface.dl( web.input() )
+      return render.dl(a,b)
+    except:
+      return render.empty()
   def POST(self):
-    [a,b] = sql_interface.dl( web.input() )
-    return render.dl(a,b)
+    try:
+      [a,b] = sql_interface.dl( web.input() )
+      return render.dl(a,b)
+    except:
+      return render.empty()
 
 class img:
   def GET(self):
