@@ -67,6 +67,7 @@ If you would prefer not to use the demo package we supply, you can generate your
 
 ```bash
 $ sudo -H pip install numpy matplotlib
+$ sudo apt-get install python-tk
 ```
 
 Then, to run the package generator, go to `propdb/tools` and do
