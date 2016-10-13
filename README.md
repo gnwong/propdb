@@ -60,4 +60,19 @@ Use (Download)
 
 After identifying the files you desire, you can download the subset by clicking the [ Download Queries Files ] button. This will bring you to a new page containing information about your request and the location of a newly-created zip file containing the requested files.
 
+Generate a demo package
+--------
+
+If you would prefer not to use the demo package we supply, you can generate your own using the `propdb/tools/demo.py` script. You'll need `numpy` and `matplotlib` installed. You can install both by doing
+
+```bash
+$ sudo -H pip install numpy matplotlib
+```
+
+Then, to run the package generator, go to `propdb/tools` and do
+
+```bash
+$ python demo.py
+```
+
 
